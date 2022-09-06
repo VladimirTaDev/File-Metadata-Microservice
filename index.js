@@ -1,8 +1,14 @@
-var express = require('express');
-var cors = require('cors');
-require('dotenv').config()
+"use strict";
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
 
-var app = express();
+// var express = require('express');
+// var cors = require('cors');
+// require('dotenv').config()
+
+const app = express();
 
 app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
